@@ -3,7 +3,7 @@ This is a database information from Openemr.
 Here, I want to extract only the table_names and the fields in each table(i.e  column_names). 
 Here is the link: https://raw.githubusercontent.com/openemr/openemr/master/sql/database.sql 
 
-# STEPS by STEP Approach
+# Step by Step Approach
 Step 1: Download MySQl workbench if you don't have it yet on your system.
 Step 2: Click on the link dataset link and copy the sql code to Notepad. 
 Step 3: Save the notepad as db_openemr.sql
