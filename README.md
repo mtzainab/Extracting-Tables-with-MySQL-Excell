@@ -14,14 +14,14 @@ Step 6: Add the code below to the top to create the database
           CREATE DATABASE OPENEMR;
           USE OPENEMR;`
 Step 7: Run the code
-Note: The database will be created and all the tables and fileds will be inputed the their data. However, it will develop an error at the end of the action output. This is because server SQL Mode is on 'NO_ZERO_DATE'. You can change that depending on the workbench you are using. Nevertherless, you can continue and later extract the table name and fields with excel. Now, we will continue and use excel to recover the table name that was nt created
+Note: The database will be created and all the tables and fileds will be inputed the their data. However, it will develop an error at the end of the action output depending on your workbench. This is because server SQL Mode is on 'NO_ZERO_DATE'. You can change that depending on the workbench you are using. Nevertherless, you can continue and later extract the table name and fields with excel. Now, we will continue and use excel to recover the table name that was nt created
 Step 8: Open a new SQL tab and write the code below
          `SELECT table_name, GROUP_CONCAT(column_name ORDER BY ordinal_position)
           FROM information_schema.columns
           WHERE table_schema = 'openemr'
           GROUP BY table_name
           ORDER BY table_name`
-Note: This will generate all the table names and corresponding fields. Click Export to export it a CSV format.
+Note: This will generate all the table names and corresponding fields. Click Export to export it a CSV format. If the earlier code deveoped an error when creating the table name 'openemr_postcalendar_events', follow the steps below to get the table fields using Microsoft excel.
 Step 9: Open Microsoft Excel and import the CSV file to load the data. Rename the Header
 Step 10: Open a new sheet
 Step 11: Return to the link of the original dataset above. Press Ctrl + F (to find the name of the table which was not created in the database 'openemr_postcalendar_events')
